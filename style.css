@@ -28,7 +28,73 @@ body{
 
 .text{
     display: flex;
+    flex: 1 1 0;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+}
+
+#slideshow_container{
+    position: relative;
+    display: flex;
+    flex: 1 1 0;
+    justify-content: end;
+    background-color: #666;
+    border-radius: 30px;
+    margin: 20px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.image{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    text-align: center;
+}
+
+#prev, #next{
+    border: none;
+    position: absolute;
+    display: flex;
+    top: 50%;
+    color: #fff;
+    background: none;
+    background-color: #11111186;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#prev:hover, #next:hover{
+    background-color: #111;
+}
+
+#prev{
+    left: 20px;
+}
+
+#next{
+    right: 20px;
+}
+
+#dots_container{
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dot{
+    width: 12px;
+    height: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+}
+
+.dot.active{
+    background-color: white;
 }
